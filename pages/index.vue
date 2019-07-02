@@ -18,6 +18,11 @@
           </div>
         </template>
       </WithQueryParam>
+      <WithQueryParam :query-key="['arg1', 'arg3']">
+        <template #default="{ arg1, arg3: arg2 }">
+          <p>You provided {{ arg1 }} and {{ arg2 }}</p>
+        </template>
+      </WithQueryParam>
     </div>
   </div>
 </template>
